@@ -130,11 +130,12 @@ table {
 * {
   box-sizing: border-box;
 }
-
-html {
-  background-color: red;
-}
 html,
 body {
   height: 100%;
+  margin: 2%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
 }
