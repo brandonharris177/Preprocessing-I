@@ -53,12 +53,132 @@ table {
     box-sizing: border-box;
 }
 
+.fancy {
+	font-family: 'Bahianita', cursive;
+}
+
+@linkcolor: rgb(104, 6, 97);
+
+.circle {
+	list-style-type: circle;
+}
+
 html, body {
 	height: 100%;
 	margin: 2%;
+	font-size: 62.5%;
 }
+
+body {
+	font-size: 2rem;
+	background: linear-gradient(to bottom right, blue,white) fixed;
+}
+
+// *{
+// 	background-image: image
+// }
 
 nav {
 	display: flex;
 	justify-content: space-between;
+	a {
+		color: @linkcolor;
+		text-decoration: none;
+	}
+	
+}
+
+.topimage {
+	width: 100%;
+	height: 20%;
+	@media screen and (max-width: 500px){
+		display: none;
+	}
+}
+
+.Title {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	h1 {
+		font-size: 6rem;
+		.fancy();
+	}
+}
+
+.section1 {
+	.intro {
+		p {
+			width: 100%;
+			text-align: center;
+			font-weight: bold;
+		}
+	}
+}
+
+h2{
+	font-size: 3rem;
+	margin: 2%;
+}
+
+.work {
+	ul {
+		display: flex;
+		flex-direction: column;
+		.circle();
+		li {
+			border-bottom: 2px solid black;
+			margin: 1%;
+			width: 80%;
+			flex-flow: row-wrap; 
+			h3 {
+				font-size: 2.2rem;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.skills {
+	ul.subset{
+		display: flex;
+		flex-flow: row wrap;
+		li {
+			border: 2px solid black;
+			width: 40%;
+			@media screen and(max-width: 500px){
+				width: 100%;
+			}
+			flex-flow: column;
+			margin: 3%;
+			padding: 2%;
+		}
+		h3 {
+			font-weight: bold;
+			margin-bottom: 1%;
+		}
+	}
+	ul.set2 {
+		.circle();
+		li {
+			display: flex;
+			border-bottom: 1px solid black;
+			margin-bottom: 2%;
+		}
+	}
+}
+
+.contact_info {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 3%;
+	width: 100%;
+	text-align: center;
+	.email-number {
+		justify-content: center;
+		a {
+			color: @linkcolor;
+			text-decoration: none;
+		}
+	}
 }
